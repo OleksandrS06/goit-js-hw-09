@@ -16,3 +16,27 @@ img {
   display: block;
   max-width: 100%;
 }
+/* body{
+  background-color: #07010f;
+} */
+.timer{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.field{
+  width: 150px;
+  height: 150px;
+  padding: 40px 40px;
+  border: #0f8633 10px solid;
+  border-radius: 50%;
+  background-color: rgb(14, 46, 94);
+}
+.value, .label{
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: #a17878;
+}
