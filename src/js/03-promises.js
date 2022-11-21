@@ -8,17 +8,17 @@ console.dir(formEl.elements);
 
 const onCreatePromisesBtnClick = event => {
   event.preventDefault();
-  firstDelay = Number(formEl.elements.delay.value);
-  step = Number(formEl.elements.step.value)
-  amount = Number(formEl.elements.amount.value);
+  let firstDelay = Number(formEl.elements.delay.value);
+  const step = Number(formEl.elements.step.value)
+  const amount = Number(formEl.elements.amount.value);
   // console.log(delay, amount, step);
   
   for (let i = 1; i <= amount; i += 1){
     createPromise( i, firstDelay).then(({ position, delay }) => {
-    Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
+    Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
   })
   .catch(({ position, delay }) => {
-    Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+    Notify.failure(`Rejected promise ${position} in ${delay}ms`);
   });
     firstDelay += step;
   }
